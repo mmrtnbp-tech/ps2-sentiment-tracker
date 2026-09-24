@@ -82,10 +82,16 @@ def get_news_mentions(game_list):
     return mentions
 
 def get_pricecharting_data(game_list):
-    """Scrapes CIB (Complete In Box) prices from PriceCharting."""
+    """Scrapes CIB (Complete In Box) prices from PriceCharting with header spoofing."""
     print("🏷️ Scraping PriceCharting...")
     prices = {}
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    
+    # Updated headers to prevent 403 Forbidden blocks from PriceCharting
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    }
     
     for game in game_list:
         slug = game.lower().replace(" ", "-").replace(":", "").replace("'", "")
@@ -94,15 +100,17 @@ def get_pricecharting_data(game_list):
             response = requests.get(url, headers=headers, timeout=10)
             if response.status_code == 200:
                 soup = BeautifulSoup(response.text, 'html.parser')
+                # Find used/CIB price
                 cib_elem = soup.find('td', id='used_price')
                 if cib_elem:
                     price_text = cib_elem.text.strip().replace('$', '').replace(',', '')
-                    prices[game] = float(price_text)
+                    prices[game] = float(price_text) if price_text else 0.0
                 else:
                     prices[game] = 0.0
             else:
+                print(f"⚠️ PriceCharting returned status {response.status_code} for {game}")
                 prices[game] = 0.0
-            time.sleep(1.5)
+            time.sleep(2)  # Avoid rate limiting
         except Exception as e:
             print(f"⚠️ PriceCharting error for {game}: {e}")
             prices[game] = 0.0
