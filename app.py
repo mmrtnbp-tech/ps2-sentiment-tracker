@@ -121,7 +121,7 @@ with tab2:
     game_history = df[df['Game'] == selected_game].sort_values("Date")
     
     fig_line = go.Figure()
-    fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['CIB_Price_USD'], name="CIB Price ($)", line=dict(color='#00CEO6', width=3)))
+    fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['CIB_Price_USD'], name="CIB Price ($)", line=dict(color='#00CE06', width=3)))
     fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['Hype_Index'], name="Hype Index", yaxis="y2", line=dict(color='#FF4B4B', width=2, dash='dot')))
     
     fig_line.update_layout(
