@@ -271,10 +271,12 @@ def get_hltb_hours(game_list):
 async def run_scraper():
     trends = get_google_trends(TARGET_GAMES)
     news = get_news_mentions(TARGET_GAMES)
-    prices = get_pricecharting_data(TARGET_GAMES)
     ra_data = get_retroachievements_data(TARGET_GAMES)
     mercari = await get_mercari_listings(TARGET_GAMES)
     hltb = get_hltb_hours(TARGET_GAMES)
+    
+    # Multi-Region Scraper (US, PAL, JP)
+    region_prices = get_multi_region_prices(TARGET_GAMES)
     
     today_str = datetime.now().strftime("%Y-%m-%d")
     new_rows = []
@@ -284,13 +286,23 @@ async def run_scraper():
         n_val = news.get(game, 0)
         ra_val = ra_data.get(game, 0)
         
-        # Calculate composite Hype Index (0 to 100 relative scale)
+        # Primary reference price uses US price if available, else PAL, else JP, else None
+        p_dict = region_prices.get(game, {})
+        us_p = p_dict.get("Price_US_USD")
+        pal_p = p_dict.get("Price_PAL_USD")
+        jp_p = p_dict.get("Price_JP_USD")
+        
+        primary_price = us_p if us_p is not None else (pal_p if pal_p is not None else jp_p)
+        
         hype_index = round(min(100.0, (t_val * 0.5) + (n_val * 15.0) + (ra_val * 0.01)), 2)
         
         new_rows.append({
             "Date": today_str,
             "Game": game,
-            "CIB_Price_USD": prices.get(game, 0.0),
+            "CIB_Price_USD": primary_price,  # Primary benchmark for scatter chart
+            "Price_US_USD": us_p,
+            "Price_PAL_USD": pal_p,
+            "Price_JP_USD": jp_p,
             "Hype_Index": hype_index,
             "Google_Trend_Score": t_val,
             "News_Mentions": n_val,
@@ -304,14 +316,10 @@ async def run_scraper():
     csv_filename = "ps2_sentiment_history.csv"
     if os.path.exists(csv_filename):
         existing_df = pd.read_csv(csv_filename)
-        # Avoid duplicating entries for today
         existing_df = existing_df[existing_df['Date'] != today_str]
         combined_df = pd.concat([existing_df, new_df], ignore_index=True)
     else:
         combined_df = new_df
         
     combined_df.to_csv(csv_filename, index=False)
-    print(f"✅ Scraping completed. Saved {len(new_rows)} entries to {csv_filename}")
-
-if __name__ == "__main__":
-    asyncio.run(run_scraper())
+    print(f"✅ Live regional price scraping completed. Updated {csv_filename}")
