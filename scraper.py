@@ -43,16 +43,52 @@ def fetch_cexdb_price(game_title):
         pass
     return None
 
+CATALOG_FILE = "master_ps2_catalog.json"
+GITHUB_CATALOG_URL = "https://raw.githubusercontent.com/niemasd/GameDB-PS2/master/PS2.titles.json"
+
+def ensure_master_catalog():
+    """Ensures master_ps2_catalog.json exists and is valid. Downloads it if missing or empty."""
+    if not os.path.exists(CATALOG_FILE) or os.path.getsize(CATALOG_FILE) == 0:
+        print("⚠️ Master catalog missing or empty. Downloading fresh from GitHub...")
+        try:
+            res = requests.get(GITHUB_CATALOG_URL, timeout=15)
+            if res.status_code == 200:
+                raw_titles = res.json()
+                unique_titles = sorted(list(set(raw_titles.values())))
+                
+                catalog = []
+                for idx, title in enumerate(unique_titles, 1):
+                    catalog.append({
+                        "id": f"PS2-{idx:04d}",
+                        "title": title,
+                        "genre": "General",
+                        "track_top_50": True if idx <= 50 else False
+                    })
+                
+                with open(CATALOG_FILE, "w", encoding="utf-8") as f:
+                    json.dump(catalog, f, indent=2)
+                print(f"✅ Successfully initialized {CATALOG_FILE} with {len(catalog)} games.")
+            else:
+                raise Exception(f"Failed to fetch catalog, status code: {res.status_code}")
+        except Exception as e:
+            print(f"❌ Error downloading catalog: {e}")
+            fallback = [{"id": "PS2-0001", "title": "Silent Hill 2", "genre": "Horror", "track_top_50": True}]
+            with open(CATALOG_FILE, "w", encoding="utf-8") as f:
+                json.dump(fallback, f, indent=2)
+
 def run_scraper():
     print("🚀 Running safe batch scraper...")
     
-    if not os.path.exists("master_ps2_catalog.json"):
+    # 1. Guarantee master catalog is present and valid before loading
+    ensure_master_catalog()
+
+    if not os.path.exists(CATALOG_FILE):
         raise FileNotFoundError("master_ps2_catalog.json is missing from the repository root!")
 
-    with open("master_ps2_catalog.json", "r", encoding="utf-8") as f:
+    with open(CATALOG_FILE, "r", encoding="utf-8") as f:
         catalog = json.load(f)
         
-    # CRITICAL: Slice to only process the first 50 active items to prevent timeouts/crashes
+    # 2. CRITICAL: Slice to only process the first 50 active items to prevent timeouts/crashes
     active_batch = [game for game in catalog if game.get("track_top_50", True)][:50]
     
     scraped_data = []
