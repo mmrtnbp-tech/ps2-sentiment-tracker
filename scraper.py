@@ -81,41 +81,131 @@ def get_news_mentions(game_list):
             
     return mentions
 
-def get_pricecharting_data(game_list):
-    """Scrapes CIB (Complete In Box) prices from PriceCharting with header spoofing."""
-    print("🏷️ Scraping PriceCharting...")
-    prices = {}
-    
-    # Updated headers to prevent 403 Forbidden blocks from PriceCharting
+import re
+import urllib.parse
+import requests
+from bs4 import BeautifulSoup
+
+# Strictly filter for Complete-In-Box items
+CIB_POSITIVE_KEYWORDS = ["cib", "complete", "with manual", "box and manual", "black label", "完品", "帯付き"]
+CIB_NEGATIVE_KEYWORDS = ["disc only", "case only", "manual only", "loose", "repro", "digital code", "junk", "ジャンク"]
+
+def get_live_exchange_rates():
+    """Fetches real-time currency conversion rates relative to USD."""
+    try:
+        res = requests.get("https://open.er-api.com/v6/latest/USD", timeout=5)
+        if res.status_code == 200:
+            return res.json().get('rates', {'USD': 1.0, 'GBP': 0.78, 'EUR': 0.92, 'JPY': 155.0})
+    except Exception as e:
+        print(f"⚠️ FX API error: {e}. Using estimated conversion rates.")
+    return {'USD': 1.0, 'GBP': 0.78, 'EUR': 0.92, 'JPY': 155.0}
+
+def is_cib_listing(title):
+    """Verifies title contains CIB indicators and excludes loose/partial items."""
+    title_lower = title.lower()
+    if any(neg in title_lower for neg in CIB_NEGATIVE_KEYWORDS):
+        return False
+    return True
+
+def parse_price_and_convert(price_text, rates):
+    """Extracts numerical value and currency symbol, converting to USD."""
+    try:
+        # Clean price string
+        clean_text = price_text.replace(',', '').strip()
+        
+        # Identify currency
+        currency = 'USD'
+        if '£' in clean_text or 'GBP' in clean_text:
+            currency = 'GBP'
+        elif '€' in clean_text or 'EUR' in clean_text:
+            currency = 'EUR'
+        elif '¥' in clean_text or 'JPY' in clean_text:
+            currency = 'JPY'
+        elif 'AU$' in clean_text or 'C$' in clean_text:
+            currency = 'USD' # Standardize CAD/AUD approx or extend as needed
+            
+        # Extract float value
+        match = re.search(r'([0-9]+\.?[0-9]*)', clean_text)
+        if match:
+            raw_val = float(match.group(1))
+            rate = rates.get(currency, 1.0)
+            usd_value = raw_val / rate if currency != 'USD' and rate > 0 else raw_val
+            return round(usd_value, 2)
+    except Exception:
+        pass
+    return None
+
+def scrape_ebay_sold_by_region(game_name, region_tag, rates):
+    """Scrapes the top 3 most recently sold listings for a specific regional variant on eBay."""
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9'
     }
     
-    for game in game_list:
-        slug = game.lower().replace(" ", "-").replace(":", "").replace("'", "")
-        url = f"https://www.pricecharting.com/game/playstation-2/{slug}"
-        try:
-            response = requests.get(url, headers=headers, timeout=10)
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.text, 'html.parser')
-                # Find used/CIB price
-                cib_elem = soup.find('td', id='used_price')
-                if cib_elem:
-                    price_text = cib_elem.text.strip().replace('$', '').replace(',', '')
-                    prices[game] = float(price_text) if price_text else 0.0
-                else:
-                    prices[game] = 0.0
-            else:
-                print(f"⚠️ PriceCharting returned status {response.status_code} for {game}")
-                prices[game] = 0.0
-            time.sleep(2)  # Avoid rate limiting
-        except Exception as e:
-            print(f"⚠️ PriceCharting error for {game}: {e}")
-            prices[game] = 0.0
+    # Regional search queries
+    region_queries = {
+        "US": f"{game_name} PS2 CIB complete NTSC-U",
+        "PAL": f"{game_name} PS2 CIB complete PAL",
+        "JP": f"{game_name} PS2 CIB 完品 NTSC-J Japan"
+    }
+    
+    query = urllib.parse.quote(region_queries.get(region_tag, f"{game_name} PS2 CIB"))
+    # _sop=13 sorts specifically by "Ended Recently" (most recent sales first)
+    ebay_url = f"https://www.ebay.com/sch/i.html?_nkw={query}&LH_Sold=1&LH_Complete=1&_sop=13"
+    
+    prices_usd = []
+    
+    try:
+        res = requests.get(ebay_url, headers=headers, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, 'html.parser')
+            items = soup.find_all('div', class_='s-item__info')
             
-    return prices
+            for item in items:
+                title_elem = item.find('div', class_='s-item__title')
+                price_elem = item.find('span', class_='s-item__price')
+                
+                if title_elem and price_elem:
+                    title_text = title_elem.text.strip()
+                    price_text = price_elem.text.strip()
+                    
+                    if is_cib_listing(title_text):
+                        usd_price = parse_price_and_convert(price_text, rates)
+                        if usd_price and usd_price > 0:
+                            prices_usd.append(usd_price)
+                            
+                # STRICT LIMIT: Stop as soon as we gather the 3 most recently sold valid listings
+                if len(prices_usd) >= 3:
+                    break
+                    
+        if prices_usd:
+            avg_price = round(sum(prices_usd) / len(prices_usd), 2)
+            print(f"  ✅ [{region_tag}] '{game_name}' Recent 3-Sale Avg: ${avg_price} USD (Sample: {prices_usd})")
+            return avg_price
+    except Exception as e:
+        print(f"  ⚠️ eBay [{region_tag}] error for '{game_name}': {e}")
+        
+    return None  # No baseline! Returns None if no recent sales exist.
+
+def get_multi_region_prices(game_list):
+    """Pulls live regional market prices across US, PAL, and JP regions."""
+    print("🏷️ Fetching Live Multi-Region Prices from eBay Sold Listings...")
+    rates = get_live_exchange_rates()
+    regional_data = {}
+    
+    for game in game_list:
+        print(f"\n🎮 Tracking live sales for: {game}")
+        us_price = scrape_ebay_sold_by_region(game, "US", rates)
+        pal_price = scrape_ebay_sold_by_region(game, "PAL", rates)
+        jp_price = scrape_ebay_sold_by_region(game, "JP", rates)
+        
+        regional_data[game] = {
+            "Price_US_USD": us_price,
+            "Price_PAL_USD": pal_price,
+            "Price_JP_USD": jp_price
+        }
+        
+    return regional_data
 
 def get_retroachievements_data(game_list):
     """Pulls achievement activity count from RetroAchievements if credentials exist."""
