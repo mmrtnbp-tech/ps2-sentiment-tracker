@@ -136,12 +136,14 @@ with tab1:
 # ---------------------------------------------------------
 # MARKET SIGNALS & RAW DATA TABLE
 # ---------------------------------------------------------
-st.subheader("⚡ Current Market Signals & Raw Metrics")
+st.subheader("⚡ Current Market Signals & Regional Metrics (Converted to USD)")
 
 st.dataframe(
-    latest_df[['Game', 'Market_Signal', 'CIB_Price_USD', 'Hype_Index', 'Google_Trend_Score', 'News_Mentions', 'Mercari_Listings']],
+    latest_df[['Game', 'Market_Signal', 'Price_US_USD', 'Price_PAL_USD', 'Price_JP_USD', 'Hype_Index', 'Google_Trend_Score', 'Mercari_Listings']],
     column_config={
-        "CIB_Price_USD": st.column_config.NumberColumn("CIB Price", format="$%.2f"),
+        "Price_US_USD": st.column_config.NumberColumn("NTSC-U (US)", format="$%.2f"),
+        "Price_PAL_USD": st.column_config.NumberColumn("PAL (EU/UK)", format="$%.2f"),
+        "Price_JP_USD": st.column_config.NumberColumn("NTSC-J (Japan)", format="$%.2f"),
         "Hype_Index": st.column_config.ProgressColumn("Hype Index", min_value=0, max_value=100),
     },
     use_container_width=True,
