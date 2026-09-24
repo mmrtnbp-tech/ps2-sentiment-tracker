@@ -1,54 +1,25 @@
-[
-  { "id": "PS2-001", "title": "Rule of Rose", "genre": "Horror", "year": 2006, "baseline_gbp": 320.0, "track_top_50": true },
-  { "id": "PS2-002", "title": "Kuon", "genre": "Horror", "year": 2004, "baseline_gbp": 280.0, "track_top_50": true },
-  { "id": "PS2-003", "title": "Haunting Ground", "genre": "Horror", "year": 2005, "baseline_gbp": 115.0, "track_top_50": true },
-  { "id": "PS2-004", "title": "Def Jam Fight for NY", "genre": "Fighting", "year": 2004, "baseline_gbp": 75.0, "track_top_50": true },
-  { "id": "PS2-005", "title": "Silent Hill 2", "genre": "Horror", "year": 2001, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-006", "title": "Silent Hill 3", "genre": "Horror", "year": 2003, "baseline_gbp": 50.0, "track_top_50": true },
-  { "id": "PS2-007", "title": "Silent Hill 4 The Room", "genre": "Horror", "year": 2004, "baseline_gbp": 40.0, "track_top_50": true },
-  { "id": "PS2-008", "title": "Silent Hill Shattered Memories", "genre": "Horror", "year": 2009, "baseline_gbp": 110.0, "track_top_50": true },
-  { "id": "PS2-009", "title": "Marvel vs Capcom 2", "genre": "Fighting", "year": 2002, "baseline_gbp": 60.0, "track_top_50": true },
-  { "id": "PS2-010", "title": "Blood Will Tell", "genre": "Action", "year": 2004, "baseline_gbp": 130.0, "track_top_50": true },
-  { "id": "PS2-011", "title": "Xenosaga Episode III", "genre": "RPG", "year": 2006, "baseline_gbp": 190.0, "track_top_50": true },
-  { "id": "PS2-012", "title": "Futurama", "genre": "Action", "year": 2003, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-013", "title": "OutRun 2006 Coast 2 Coast", "genre": "Racing", "year": 2006, "baseline_gbp": 50.0, "track_top_50": true },
-  { "id": "PS2-014", "title": "God Hand", "genre": "Action", "year": 2006, "baseline_gbp": 70.0, "track_top_50": true },
-  { "id": "PS2-015", "title": "Clock Tower 3", "genre": "Horror", "year": 2002, "baseline_gbp": 55.0, "track_top_50": true },
-  { "id": "PS2-016", "title": "Obscure", "genre": "Horror", "year": 2004, "baseline_gbp": 35.0, "track_top_50": true },
-  { "id": "PS2-017", "title": "Obscure The Aftermath", "genre": "Horror", "year": 2007, "baseline_gbp": 30.0, "track_top_50": true },
-  { "id": "PS2-018", "title": "Fatal Frame", "genre": "Horror", "year": 2001, "baseline_gbp": 50.0, "track_top_50": true },
-  { "id": "PS2-019", "title": "Fatal Frame II Crimson Butterfly", "genre": "Horror", "year": 2003, "baseline_gbp": 60.0, "track_top_50": true },
-  { "id": "PS2-020", "title": "Fatal Frame III The Tormented", "genre": "Horror", "year": 2005, "baseline_gbp": 75.0, "track_top_50": true },
-  { "id": "PS2-021", "title": "Echo Night Beyond", "genre": "Horror", "year": 2004, "baseline_gbp": 120.0, "track_top_50": true },
-  { "id": "PS2-022", "title": "Wild Arms Alter Code F", "genre": "RPG", "year": 2005, "baseline_gbp": 110.0, "track_top_50": true },
-  { "id": "PS2-023", "title": "Suikoden V", "genre": "RPG", "year": 2006, "baseline_gbp": 85.0, "track_top_50": true },
-  { "id": "PS2-024", "title": "Suikoden IV", "genre": "RPG", "year": 2004, "baseline_gbp": 35.0, "track_top_50": true },
-  { "id": "PS2-025", "title": "Dragon Ball Z Budokai Tenkaichi 3", "genre": "Fighting", "year": 2007, "baseline_gbp": 80.0, "track_top_50": true },
-  { "id": "PS2-026", "title": "Shin Megami Tensei Persona 4", "genre": "RPG", "year": 2008, "baseline_gbp": 25.0, "track_top_50": true },
-  { "id": "PS2-027", "title": "Shin Megami Tensei Persona 3 FES", "genre": "RPG", "year": 2007, "baseline_gbp": 30.0, "track_top_50": true },
-  { "id": "PS2-028", "title": "Devil Summoner Raidou Kuzunoha", "genre": "RPG", "year": 2006, "baseline_gbp": 140.0, "track_top_50": true },
-  { "id": "PS2-029", "title": "Devil Summoner 2 Abaddon King", "genre": "RPG", "year": 2008, "baseline_gbp": 150.0, "track_top_50": true },
-  { "id": "PS2-030", "title": "Baldurs Gate Dark Alliance II", "genre": "RPG", "year": 2004, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-031", "title": "Champions Return to Arms", "genre": "RPG", "year": 2005, "baseline_gbp": 40.0, "track_top_50": true },
-  { "id": "PS2-032", "title": "Metal Gear Solid 3 Subsistence", "genre": "Action", "year": 2006, "baseline_gbp": 35.0, "track_top_50": true },
-  { "id": "PS2-033", "title": "Grand Theft Auto San Andreas", "genre": "Action", "year": 2004, "baseline_gbp": 12.0, "track_top_50": true },
-  { "id": "PS2-034", "title": "God of War II", "genre": "Action", "year": 2007, "baseline_gbp": 15.0, "track_top_50": true },
-  { "id": "PS2-035", "title": "Shadow of the Colossus", "genre": "Adventure", "year": 2005, "baseline_gbp": 18.0, "track_top_50": true },
-  { "id": "PS2-036", "title": "Resident Evil Dead Aim", "genre": "Horror", "year": 2003, "baseline_gbp": 50.0, "track_top_50": true },
-  { "id": "PS2-037", "title": "Gregory Horror Show", "genre": "Horror", "year": 2003, "baseline_gbp": 65.0, "track_top_50": true },
-  { "id": "PS2-038", "title": "Michigan Report from Hell", "genre": "Horror", "year": 2004, "baseline_gbp": 85.0, "track_top_50": true },
-  { "id": "PS2-039", "title": "Glass Rose", "genre": "Adventure", "year": 2003, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-040", "title": "Forbidden Siren 2", "genre": "Horror", "year": 2006, "baseline_gbp": 40.0, "track_top_50": true },
-  { "id": "PS2-041", "title": "Manhunt 2", "genre": "Action", "year": 2007, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-042", "title": "The X-Files Resist or Serve", "genre": "Horror", "year": 2004, "baseline_gbp": 55.0, "track_top_50": true },
-  { "id": "PS2-043", "title": "Castlevania Curse of Darkness", "genre": "Action", "year": 2005, "baseline_gbp": 60.0, "track_top_50": true },
-  { "id": "PS2-044", "title": "Berserk Millennium Falcon", "genre": "Action", "year": 2004, "baseline_gbp": 70.0, "track_top_50": true },
-  { "id": "PS2-045", "title": "Klonoa 2 Lunateas Veil", "genre": "Platformer", "year": 2001, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-046", "title": "Steambot Chronicles", "genre": "RPG", "year": 2005, "baseline_gbp": 90.0, "track_top_50": true },
-  { "id": "PS2-047", "title": "Yakuza 2", "genre": "Action", "year": 2006, "baseline_gbp": 30.0, "track_top_50": true },
-  { "id": "PS2-048", "title": "Valkyrie Profile 2 Silmeria", "genre": "RPG", "year": 2006, "baseline_gbp": 28.0, "track_top_50": true },
-  { "id": "PS2-049", "title": "Zone of the Enders The 2nd Runner", "genre": "Action", "year": 2003, "baseline_gbp": 20.0, "track_top_50": true },
-  { "id": "PS2-050", "title": "Atelier Iris 3 Grand Phantasm", "genre": "RPG", "year": 2006, "baseline_gbp": 45.0, "track_top_50": true },
-  { "id": "PS2-051", "title": "Gran Turismo 4", "genre": "Racing", "year": 2004, "baseline_gbp": 8.0, "track_top_50": false },
-  { "id": "PS2-052", "title": "Final Fantasy X", "genre": "RPG", "year": 2001, "baseline_gbp": 10.0, "track_top_50": false }
-]
+import requests
+import json
+
+# Fetch complete PS2 game database mapping from open GitHub repo
+url = "https://raw.githubusercontent.com/niemasd/GameDB-PS2/master/PS2.titles.json"
+response = requests.get(url)
+
+if response.status_code == 200:
+    raw_titles = response.json()
+    
+    # Deduplicate disc IDs into unique game titles
+    unique_titles = sorted(list(set(raw_titles.values())))
+    
+    catalog = []
+    for idx, title in enumerate(unique_titles, 1):
+        catalog.append({
+            "id": f"PS2-{idx:04d}",
+            "title": title,
+            "track_top_50": False  # Toggle true for target games
+        })
+
+    with open("master_ps2_catalog.json", "w", encoding="utf-8") as f:
+        json.dump(catalog, f, indent=2)
+
+    print(f"✅ Generated master_ps2_catalog.json with {len(catalog)} games!")
