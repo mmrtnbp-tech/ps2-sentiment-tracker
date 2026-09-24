@@ -106,16 +106,17 @@ with tab2:
     st.plotly_chart(fig_line, use_container_width=True)
 
 # --- REGIONAL DATA TABLE ---
-st.subheader("⚡ Current Market Signals & Regional Metrics (Converted to USD)")
+st.subheader("⚡ Current Market Signals & Regional Metrics")
 
-cols_to_show = [c for c in ['Game', 'Market_Signal', 'Price_US_USD', 'Price_PAL_USD', 'Price_JP_USD', 'Hype_Index', 'Google_Trend_Score', 'Mercari_Listings'] if c in latest_df.columns]
+cols_to_show = [c for c in ['Game', 'Market_Signal', 'Price_PAL_GBP', 'Price_PAL_USD', 'Price_US_USD', 'Price_JP_USD', 'Hype_Index', 'Mercari_Listings'] if c in latest_df.columns]
 
 st.dataframe(
     latest_df[cols_to_show],
     column_config={
-        "Price_US_USD": st.column_config.NumberColumn("NTSC-U (US)", format="$%.2f"),
-        "Price_PAL_USD": st.column_config.NumberColumn("PAL (EU/UK)", format="$%.2f"),
-        "Price_JP_USD": st.column_config.NumberColumn("NTSC-J (Japan)", format="$%.2f"),
+        "Price_PAL_GBP": st.column_config.NumberColumn("CeX Retail (GBP)", format="£%.2f"),
+        "Price_PAL_USD": st.column_config.NumberColumn("PAL Converted (USD)", format="$%.2f"),
+        "Price_US_USD": st.column_config.NumberColumn("NTSC-U / US (USD)", format="$%.2f"),
+        "Price_JP_USD": st.column_config.NumberColumn("NTSC-J / Japan (USD)", format="$%.2f"),
         "Hype_Index": st.column_config.ProgressColumn("Hype Index", min_value=0, max_value=100),
     },
     use_container_width=True,
