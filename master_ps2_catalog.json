@@ -1,0 +1,21 @@
+import json
+
+# Full Master Catalog sample structure (store all 2500+ PS2 games here)
+FULL_PS2_CATALOG = [
+    {"id": "PS2-0001", "title": "Silent Hill 2", "genre": "Horror", "year": 2001, "track_priority": 1},
+    {"id": "PS2-0002", "title": "Rule of Rose", "genre": "Horror", "year": 2006, "track_priority": 1},
+    {"id": "PS2-0003", "title": "Haunting Ground", "genre": "Horror", "year": 2005, "track_priority": 1},
+    {"id": "PS2-0004", "title": "Kuon", "genre": "Horror", "year": 2004, "track_priority": 1},
+    {"id": "PS2-0005", "title": "Grand Theft Auto: San Andreas", "genre": "Action", "year": 2004, "track_priority": 1},
+    {"id": "PS2-0006", "title": "God of War II", "genre": "Action", "year": 2007, "track_priority": 1},
+    {"id": "PS2-0007", "title": "Metal Gear Solid 3: Snake Eater", "genre": "Stealth", "year": 2004, "track_priority": 1},
+    {"id": "PS2-0008", "title": "Shadow of the Colossus", "genre": "Adventure", "year": 2005, "track_priority": 1},
+    {"id": "PS2-0009", "title": "Kingdom Hearts II", "genre": "RPG", "year": 2005, "track_priority": 1},
+    {"id": "PS2-0010", "title": "Persona 4", "genre": "RPG", "year": 2008, "track_priority": 1},
+    # Add all remaining PS2 game titles here...
+]
+
+with open("master_ps2_catalog.json", "w", encoding="utf-8") as f:
+    json.dump(FULL_PS2_CATALOG, f, indent=4)
+
+print(f"Master Database initialized with {len(FULL_PS2_CATALOG)} titles.")
