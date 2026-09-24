@@ -97,41 +97,41 @@ st.divider()
 # ---------------------------------------------------------
 # CHARTS & VISUALIZATIONS
 # ---------------------------------------------------------
-tab1, tab2, tab3 = st.columns([2, 2, 1])
+tab1, tab2 = st.columns([1, 1])
 
 with tab1:
     st.subheader("📈 Hype Index vs. CIB Market Price")
+    
+    # Ensure bubble size is never 0 so Plotly renders cleanly
+    latest_df['Bubble_Size'] = latest_df['Mercari_Listings'].apply(lambda x: max(int(x), 5) if pd.notnull(x) else 5)
+
     fig_scatter = px.scatter(
         latest_df,
         x="Hype_Index",
         y="CIB_Price_USD",
         color="Market_Signal",
-        text="Game",
-        size="Mercari_Listings",
+        hover_name="Game",  # <-- Uses interactive hover labels instead of overlapping text!
+        size="Bubble_Size",
+        size_max=25,
+        hover_data={
+            "Hype_Index": ":.1f",
+            "CIB_Price_USD": ":$.2f",
+            "Mercari_Listings": True,
+            "Bubble_Size": False
+        },
         labels={"Hype_Index": "Hype Index Score", "CIB_Price_USD": "CIB Price (USD)"},
         template="plotly_dark",
-        height=450
+        height=480
     )
-    fig_scatter.update_traces(textposition='top center')
-    st.plotly_chart(fig_scatter, use_container_width=True)
 
-with tab2:
-    st.subheader("📜 Historical Price & Sentiment Trend")
-    selected_game = st.selectbox("Select Benchmark Title", df['Game'].unique())
-    game_history = df[df['Game'] == selected_game].sort_values("Date")
-    
-    fig_line = go.Figure()
-    fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['CIB_Price_USD'], name="CIB Price ($)", line=dict(color='#00CE06', width=3)))
-    fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['Hype_Index'], name="Hype Index", yaxis="y2", line=dict(color='#FF4B4B', width=2, dash='dot')))
-    
-    fig_line.update_layout(
-        template="plotly_dark",
-        height=400,
-        yaxis=dict(title="Price (USD)"),
-        yaxis2=dict(title="Hype Index", overlaying="y", side="right"),
-        legend=dict(x=0, y=1.1, orientation="h")
+    # Adjust layout padding so points aren't cut off at axis edges
+    fig_scatter.update_layout(
+        margin=dict(l=20, r=20, t=30, b=20),
+        xaxis=dict(zeroline=False),
+        yaxis=dict(zeroline=False)
     )
-    st.plotly_chart(fig_line, use_container_width=True)
+
+    st.plotly_chart(fig_scatter, use_container_width=True)
 
 # ---------------------------------------------------------
 # MARKET SIGNALS & RAW DATA TABLE
