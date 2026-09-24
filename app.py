@@ -1,124 +1,76 @@
 import streamlit as st
+import json
+import os
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-import numpy as np
-from datetime import datetime
 
-st.set_page_config(page_title="PS2 Retro Market & Sentiment Tracker", page_icon="🎮", layout="wide")
+st.set_page_config(page_title="PS2 Market Cap & Price Tracker", layout="wide")
 
-@st.cache_data(ttl=60)  # Lower cache TTL to refresh quickly when CSV updates
-def load_data():
-    try:
-        df = pd.read_csv("ps2_sentiment_history.csv")
-        df['Date'] = pd.to_datetime(df['Date'])
-        return df
-    except Exception:
-        # Fallback if CSV doesn't exist yet
-        return pd.DataFrame()
+@st.cache_data
+def load_master_catalog():
+    if os.path.exists("master_ps2_catalog.json"):
+        with open("master_ps2_catalog.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
 
-df = load_data()
+st.title("🎮 PS2 Market Intelligence Dashboard")
 
-if df.empty:
-    st.warning("⚠️ No data found in `ps2_sentiment_history.csv`. Please trigger your GitHub Action scraper!")
-    st.stop()
+# Load Master Catalog for Dropdown Lookup
+catalog = load_master_catalog()
+all_titles = [g["title"] for g in catalog]
 
-# Ensure regional price columns exist in DataFrame even if old CSV entries miss them
-for col in ['Price_US_USD', 'Price_PAL_USD', 'Price_JP_USD']:
-    if col not in df.columns:
-        df[col] = df.get('CIB_Price_USD', np.nan)
+selected_game = st.selectbox("Search Master PS2 Database:", all_titles)
 
-latest_date = df['Date'].max()
-latest_df = df[df['Date'] == latest_date].copy()
-
-def calculate_signal(row):
-    price = row.get('Price_US_USD') or row.get('CIB_Price_USD') or 0
-    hype = row.get('Hype_Index', 0)
-    if hype > 65 and price < 80:
-        return "🟢 BUY SIGNAL"
-    elif hype > 80 and price > 150:
-        return "🔴 OVERHEATED"
+# Load CSV Price History
+csv_file = "ps2_sentiment_history.csv"
+if os.path.exists(csv_file):
+    df = pd.read_csv(csv_file)
+    latest_date = df['Date'].max()
+    latest_df = df[df['Date'] == latest_date].copy()
+    
+    # --------------------------------------------------------------------------
+    # SECTION 1: MASTER DATABASE LOOKUP
+    # --------------------------------------------------------------------------
+    game_history = df[df["Game"] == selected_game]
+    
+    if not game_history.empty:
+        latest_row = game_history.iloc[-1]
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Current Price (USD)", f"${latest_row['CIB_Price_USD']:.2f}")
+        col2.metric("CeX PAL Price (£)", f"£{latest_row['Price_PAL_GBP']:.2f}")
+        col3.metric("Est. Market Cap", f"${latest_row['Market_Cap_USD']:,.2f}")
+        col4.metric("Market Signal", latest_row['Market_Signal'])
     else:
-        return "🟡 STABLE HOLD"
+        st.info(f"'{selected_game}' is on hold in the master catalog but not in the active Top 50 tracked list.")
 
-latest_df['Market_Signal'] = latest_df.apply(calculate_signal, axis=1)
+    # --------------------------------------------------------------------------
+    # SECTION 2: COINGECKO-STYLE TOP 50 LEADERBOARD TABLE
+    # --------------------------------------------------------------------------
+    st.divider()
+    st.subheader("🦎 Top 50 PS2 Collectibles by Market Valuation (CoinGecko Style)")
+    st.caption(f"Live Market Cap and regional valuations as of {latest_date}")
 
-# --- HEADER & METRICS ---
-st.title("🎮 PS2 Market Sentiment & Regional Price Dashboard")
-st.caption("Tracking NTSC-U, PAL, and NTSC-J real eBay CIB sales alongside web sentiment.")
+    top_50_df = latest_df.sort_values("Rank").head(50)
 
-col1, col2, col3, col4 = st.columns(4)
-top_hype = latest_df.loc[latest_df['Hype_Index'].idxmax()]
-top_price = latest_df.loc[latest_df['CIB_Price_USD'].idxmax()]
-
-col1.metric("Highest Hype Index", f"{top_hype['Game']}", f"{top_hype['Hype_Index']} pts")
-col2.metric("Most Expensive Title", f"{top_price['Game']}", f"${top_price['CIB_Price_USD']:.2f}" if pd.notnull(top_price['CIB_Price_USD']) else "N/A")
-col3.metric("Total Tracked Titles", len(latest_df))
-col4.metric("Last Pipeline Sync", latest_date.strftime("%Y-%m-%d"))
-
-st.divider()
-
-# --- CHARTS ---
-tab1, tab2 = st.columns([1, 1])
-
-with tab1:
-    st.subheader("📈 Hype Index vs. CIB Market Price")
-    latest_df['Bubble_Size'] = latest_df['Mercari_Listings'].apply(lambda x: max(int(x), 5) if pd.notnull(x) else 5)
-
-    fig_scatter = px.scatter(
-        latest_df,
-        x="Hype_Index",
-        y="CIB_Price_USD",
-        color="Market_Signal",
-        hover_name="Game",
-        size="Bubble_Size",
-        size_max=25,
-        hover_data={
-            "Hype_Index": ":.1f",
-            "Price_US_USD": ":$.2f",
-            "Price_PAL_USD": ":$.2f",
-            "Price_JP_USD": ":$.2f",
-            "Mercari_Listings": True,
-            "Bubble_Size": False
+    st.dataframe(
+        top_50_df[[
+            'Rank', 'Game', 'CIB_Price_USD', 'Market_Cap_USD', 
+            'Price_PAL_GBP', 'Price_US_USD', 'Price_JP_USD', 
+            'Hype_Index', 'Market_Signal'
+        ]],
+        column_config={
+            "Rank": st.column_config.NumberColumn("# Rank", format="#%d", width="small"),
+            "Game": st.column_config.TextColumn("Title / Game Name", width="medium"),
+            "CIB_Price_USD": st.column_config.NumberColumn("CIB Price (USD)", format="$%.2f"),
+            "Market_Cap_USD": st.column_config.NumberColumn("Market Cap ($)", format="$%.2f"),
+            "Price_PAL_GBP": st.column_config.NumberColumn("CeX PAL (£)", format="£%.2f"),
+            "Price_US_USD": st.column_config.NumberColumn("NTSC-U ($)", format="$%.2f"),
+            "Price_JP_USD": st.column_config.NumberColumn("NTSC-J ($)", format="$%.2f"),
+            "Hype_Index": st.column_config.ProgressColumn("Hype Score", min_value=0, max_value=100),
+            "Market_Signal": st.column_config.TextColumn("Signal", width="small")
         },
-        labels={"Hype_Index": "Hype Index Score", "CIB_Price_USD": "Primary Price (USD)"},
-        template="plotly_dark",
-        height=450
+        use_container_width=True,
+        hide_index=True,
+        height=600
     )
-    st.plotly_chart(fig_scatter, use_container_width=True)
-
-with tab2:
-    st.subheader("📜 Historical Price & Sentiment Trend")
-    selected_game = st.selectbox("Select Benchmark Title", df['Game'].unique())
-    game_history = df[df['Game'] == selected_game].sort_values("Date")
-    
-    fig_line = go.Figure()
-    fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['CIB_Price_USD'], name="CIB Price ($)", line=dict(color='#00CE06', width=3)))
-    fig_line.add_trace(go.Scatter(x=game_history['Date'], y=game_history['Hype_Index'], name="Hype Index", yaxis="y2", line=dict(color='#FF4B4B', width=2, dash='dot')))
-    
-    fig_line.update_layout(
-        template="plotly_dark",
-        height=400,
-        yaxis=dict(title="Price (USD)"),
-        yaxis2=dict(title="Hype Index", overlaying="y", side="right"),
-        legend=dict(x=0, y=1.1, orientation="h")
-    )
-    st.plotly_chart(fig_line, use_container_width=True)
-
-# --- REGIONAL DATA TABLE ---
-st.subheader("⚡ Current Market Signals & Regional Metrics")
-
-cols_to_show = [c for c in ['Game', 'Market_Signal', 'Price_PAL_GBP', 'Price_PAL_USD', 'Price_US_USD', 'Price_JP_USD', 'Hype_Index', 'Mercari_Listings'] if c in latest_df.columns]
-
-st.dataframe(
-    latest_df[cols_to_show],
-    column_config={
-        "Price_PAL_GBP": st.column_config.NumberColumn("CeX Retail (GBP)", format="£%.2f"),
-        "Price_PAL_USD": st.column_config.NumberColumn("PAL Converted (USD)", format="$%.2f"),
-        "Price_US_USD": st.column_config.NumberColumn("NTSC-U / US (USD)", format="$%.2f"),
-        "Price_JP_USD": st.column_config.NumberColumn("NTSC-J / Japan (USD)", format="$%.2f"),
-        "Hype_Index": st.column_config.ProgressColumn("Hype Index", min_value=0, max_value=100),
-    },
-    use_container_width=True,
-    hide_index=True
-)
+else:
+    st.warning("No dataset found! Run `python scraper.py` to populate `ps2_sentiment_history.csv`.")
