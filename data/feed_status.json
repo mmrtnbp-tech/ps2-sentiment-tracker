@@ -120,7 +120,7 @@
     "ok": true
   },
   "https://feeds.megaphone.fm/GOONSMEDIALLC6622958176": {
-    "latest": "2026-10-29 20:00 UTC",
+    "latest": "2026-10-31 19:00 UTC",
     "ok": true
   },
   "https://feeds.megaphone.fm/NSR2628308212": {
@@ -164,7 +164,7 @@
     "ok": true
   },
   "https://kotaku.com/rss": {
-    "latest": "2026-10-31 16:30 UTC",
+    "latest": "2026-10-31 19:48 UTC",
     "ok": true
   },
   "https://latam.ign.com/feed.xml": {
@@ -176,7 +176,7 @@
     "ok": true
   },
   "https://nintendoeverything.com/feed": {
-    "latest": "2026-10-31 14:02 UTC",
+    "latest": "2026-10-31 16:00 UTC",
     "ok": true
   },
   "https://pinecast.com/feed/the-minnmax-show": {
@@ -260,7 +260,7 @@
     "ok": true
   },
   "https://www.destructoid.com/feed/": {
-    "latest": "2026-10-31 17:04 UTC",
+    "latest": "2026-10-31 19:40 UTC",
     "ok": true
   },
   "https://www.eurogamer.net/feed": {
@@ -272,7 +272,7 @@
     "ok": true
   },
   "https://www.gamespot.com/feeds/mashup/": {
-    "latest": "2026-10-31 15:33 UTC",
+    "latest": "2026-10-31 20:00 UTC",
     "ok": true
   },
   "https://www.gematsu.com/feed": {
@@ -288,15 +288,15 @@
     "ok": true
   },
   "https://www.pcgamer.com/rss/": {
-    "latest": "2026-10-31 17:26 UTC",
+    "latest": "2026-10-31 21:11 UTC",
     "ok": true
   },
   "https://www.polygon.com/rss/index.xml": {
-    "latest": "2026-10-31 17:00 UTC",
+    "latest": "2026-10-31 21:00 UTC",
     "ok": true
   },
   "https://www.pushsquare.com/feeds/latest": {
-    "latest": "2026-10-31 15:15 UTC",
+    "latest": "2026-10-31 18:00 UTC",
     "ok": true
   },
   "https://www.rockpapershotgun.com/feed/": {
@@ -320,7 +320,7 @@
     "ok": true
   },
   "https://www.timeextension.com/feed": {
-    "latest": "2026-10-31 16:00 UTC",
+    "latest": "2026-10-31 20:00 UTC",
     "ok": true
   },
   "https://www.vg247.com/feed": {
@@ -332,19 +332,19 @@
     "ok": true
   },
   "reddit:emulation": {
-    "latest": "2026-10-30 17:26 UTC",
+    "latest": "2026-10-31 15:35 UTC",
     "ok": true
   },
   "reddit:gamecollecting": {
-    "latest": "2026-10-31 16:41 UTC",
+    "latest": "2026-10-31 21:33 UTC",
     "ok": true
   },
   "reddit:games": {
-    "latest": "2026-10-31 14:39 UTC",
+    "latest": "2026-10-31 19:15 UTC",
     "ok": true
   },
   "reddit:gameverifying": {
-    "latest": "2026-10-31 17:28 UTC",
+    "latest": "2026-10-31 21:18 UTC",
     "ok": true
   },
   "reddit:gaming": {
@@ -352,11 +352,11 @@
     "ok": true
   },
   "reddit:gamingsuggestions": {
-    "latest": "2026-10-31 15:08 UTC",
+    "latest": "2026-10-31 20:45 UTC",
     "ok": true
   },
   "reddit:jrpg": {
-    "latest": "2026-10-31 16:29 UTC",
+    "latest": "2026-10-31 19:54 UTC",
     "ok": true
   },
   "reddit:limitedprintgames": {
@@ -364,11 +364,11 @@
     "ok": true
   },
   "reddit:nintendoswitch": {
-    "latest": "2026-10-31 16:50 UTC",
+    "latest": "2026-10-31 17:14 UTC",
     "ok": true
   },
   "reddit:nscollectors": {
-    "latest": "2026-10-31 17:06 UTC",
+    "latest": "2026-10-31 19:49 UTC",
     "ok": true
   },
   "reddit:patientgamers": {
@@ -376,15 +376,15 @@
     "ok": true
   },
   "reddit:pcgaming": {
-    "latest": "2026-10-31 15:43 UTC",
+    "latest": "2026-10-31 17:05 UTC",
     "ok": true
   },
   "reddit:pcmasterrace": {
-    "latest": "2026-10-31 14:43 UTC",
+    "latest": "2026-10-31 16:30 UTC",
     "ok": true
   },
   "reddit:pcsx2": {
-    "latest": "2026-10-31 16:23 UTC",
+    "latest": "2026-10-31 19:31 UTC",
     "ok": true
   },
   "reddit:playstation": {
@@ -392,15 +392,15 @@
     "ok": true
   },
   "reddit:playstation2": {
-    "latest": "2026-10-31 05:51 UTC",
+    "latest": "2026-10-31 21:30 UTC",
     "ok": true
   },
   "reddit:ps2": {
-    "latest": "2026-10-31 17:24 UTC",
+    "latest": "2026-10-31 21:30 UTC",
     "ok": true
   },
   "reddit:ps2homebrew": {
-    "latest": "2026-10-31 16:52 UTC",
+    "latest": "2026-10-31 19:49 UTC",
     "ok": true
   },
   "reddit:psx": {
@@ -408,15 +408,15 @@
     "ok": true
   },
   "reddit:retrogaming": {
-    "latest": "2026-10-31 16:20 UTC",
+    "latest": "2026-10-31 19:58 UTC",
     "ok": true
   },
   "reddit:shouldibuythisgame": {
-    "latest": "2026-10-31 16:42 UTC",
+    "latest": "2026-10-31 19:26 UTC",
     "ok": true
   },
   "reddit:steamdeck": {
-    "latest": "2026-10-31 14:37 UTC",
+    "latest": "2026-10-31 18:53 UTC",
     "ok": true
   },
   "reddit:steelbook": {
@@ -464,7 +464,7 @@
     "ok": true
   },
   "youtube:UC3IYhdamzjvEJ9CwkQa4RAw": {
-    "latest": "2026-10-31 07:26 UTC",
+    "latest": "2026-10-31 21:35 UTC",
     "ok": true
   },
   "youtube:UC3ltptWa0xfrDweghW94Acg": {
@@ -496,7 +496,7 @@
     "ok": true
   },
   "youtube:UC6W4xz9_OdWf2kF_yL7UbEQ": {
-    "latest": "2026-10-31 16:30 UTC",
+    "latest": "2026-10-31 20:20 UTC",
     "ok": true
   },
   "youtube:UC6yzV_xgKn8r77FkcmZyMSg": {
@@ -580,7 +580,7 @@
     "ok": true
   },
   "youtube:UCJ2ZDzMRgSrxmwphstrm8Ww": {
-    "latest": "2026-10-30 17:00 UTC",
+    "latest": "2026-10-31 19:00 UTC",
     "ok": true
   },
   "youtube:UCJVdNvvuvOnthuWVQjYff2w": {
@@ -620,7 +620,7 @@
     "ok": true
   },
   "youtube:UCNvzD7Z-g64bPXxGzaQaa4g": {
-    "latest": "2026-10-30 20:42 UTC",
+    "latest": "2026-10-31 17:34 UTC",
     "ok": true
   },
   "youtube:UCPYJR2EIu0_MJaDeSGwkIVw": {
@@ -764,7 +764,7 @@
     "ok": true
   },
   "youtube:UCgHPug_ZesHYlCA-Jc25VgQ": {
-    "latest": "2026-10-31 11:23 UTC",
+    "latest": "2026-10-31 19:55 UTC",
     "ok": true
   },
   "youtube:UCgRaK4A7yi4ZELCLUjdP_pg": {
@@ -784,7 +784,7 @@
     "ok": true
   },
   "youtube:UCitsvZeConV2Im24BVFH8hg": {
-    "latest": "2026-10-31 16:30 UTC",
+    "latest": "2026-10-31 21:23 UTC",
     "ok": true
   },
   "youtube:UCjBp_7RuDBUYbd1LegWEJ8g": {
@@ -808,11 +808,11 @@
     "ok": true
   },
   "youtube:UCn2pQB4jsCTLUtx2NIkCvUg": {
-    "latest": "2026-10-31 13:00 UTC",
+    "latest": "2026-10-31 21:00 UTC",
     "ok": true
   },
   "youtube:UCoIXnB865l9Ex9zs4OIXTdQ": {
-    "latest": "2026-10-31 12:00 UTC",
+    "latest": "2026-10-31 21:33 UTC",
     "ok": true
   },
   "youtube:UCoZQiN0o7f36H7PaW4fVhFw": {
@@ -872,7 +872,7 @@
     "ok": true
   },
   "youtube:UCyS4xQE6DK4_p3qXQwJQAyA": {
-    "latest": "2026-10-28 20:08 UTC",
+    "latest": "2026-10-31 19:00 UTC",
     "ok": true
   }
 }
