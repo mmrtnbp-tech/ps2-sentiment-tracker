@@ -44,7 +44,7 @@
     "ok": true
   },
   "https://audioboom.com/channels/5144387.rss": {
-    "latest": "2026-11-17 08:46 UTC",
+    "latest": "2026-11-19 05:00 UTC",
     "ok": true
   },
   "https://blog.playstation.com/feed/": {
@@ -64,7 +64,7 @@
     "ok": true
   },
   "https://feed.podbean.com/pstrophyroom/feed.xml": {
-    "latest": "2026-11-12 09:00 UTC",
+    "latest": "2026-11-19 09:00 UTC",
     "ok": true
   },
   "https://feed.podbean.com/retrovaniacs/feed.xml": {
@@ -84,7 +84,7 @@
     "ok": true
   },
   "https://feeds.acast.com/public/shows/63b458521043e00011114396": {
-    "latest": "2026-11-17 06:00 UTC",
+    "latest": "2026-11-19 06:00 UTC",
     "ok": true
   },
   "https://feeds.acast.com/public/shows/6500f421d570420011d0e34b": {
@@ -92,11 +92,11 @@
     "ok": true
   },
   "https://feeds.acast.com/public/shows/6500f7e38c35840011fa822f": {
-    "latest": "2026-11-12 01:01 UTC",
+    "latest": "2026-11-19 01:46 UTC",
     "ok": true
   },
   "https://feeds.acast.com/public/shows/6519b599fc8c840012975a4c": {
-    "latest": "2026-11-12 02:16 UTC",
+    "latest": "2026-11-19 01:22 UTC",
     "ok": true
   },
   "https://feeds.acast.com/public/shows/69e6e95d0b4baf3bf24eb30f": {
@@ -116,7 +116,7 @@
     "ok": true
   },
   "https://feeds.megaphone.fm/AMGAC9705074721": {
-    "latest": "2026-11-17 09:00 UTC",
+    "latest": "2026-11-19 09:00 UTC",
     "ok": true
   },
   "https://feeds.megaphone.fm/GOONSMEDIALLC6622958176": {
@@ -144,7 +144,7 @@
     "ok": true
   },
   "https://feeds.megaphone.fm/buttonboys": {
-    "latest": "2026-11-12 00:00 UTC",
+    "latest": "2026-11-19 00:00 UTC",
     "ok": true
   },
   "https://feeds.megaphone.fm/friendspersecond": {
@@ -160,11 +160,11 @@
     "ok": true
   },
   "https://feeds.transistor.fm/rpgfan-retro-encounter": {
-    "latest": "2026-10-22 10:36 UTC",
+    "latest": "2026-11-19 11:36 UTC",
     "ok": true
   },
   "https://kotaku.com/rss": {
-    "latest": "2026-11-19 01:39 UTC",
+    "latest": "2026-11-19 12:30 UTC",
     "ok": true
   },
   "https://latam.ign.com/feed.xml": {
@@ -176,7 +176,7 @@
     "ok": true
   },
   "https://nintendoeverything.com/feed": {
-    "latest": "2026-11-19 01:02 UTC",
+    "latest": "2026-11-19 09:12 UTC",
     "ok": true
   },
   "https://pinecast.com/feed/the-minnmax-show": {
@@ -204,7 +204,7 @@
     "ok": true
   },
   "https://rss.art19.com/remember-the-game": {
-    "latest": "2026-11-11 01:00 UTC",
+    "latest": "2026-11-18 18:00 UTC",
     "ok": true
   },
   "https://rss.buzzsprout.com/166619.rss": {
@@ -256,31 +256,31 @@
     "ok": true
   },
   "https://vandal.elespanol.com/xml.cgi": {
-    "latest": "2026-11-18 23:00 UTC",
+    "latest": "2026-11-19 13:00 UTC",
     "ok": true
   },
   "https://www.destructoid.com/feed/": {
-    "latest": "2026-11-19 00:38 UTC",
+    "latest": "2026-11-19 12:16 UTC",
     "ok": true
   },
   "https://www.eurogamer.net/feed": {
-    "latest": "2026-11-18 20:40 UTC",
+    "latest": "2026-11-19 13:03 UTC",
     "ok": true
   },
   "https://www.eurogamer.pt/feed": {
-    "latest": "2026-11-18 22:45 UTC",
+    "latest": "2026-11-19 10:48 UTC",
     "ok": true
   },
   "https://www.gamespot.com/feeds/mashup/": {
-    "latest": "2026-11-18 22:09 UTC",
+    "latest": "2026-11-19 12:27 UTC",
     "ok": true
   },
   "https://www.gematsu.com/feed": {
-    "latest": "2026-11-19 03:06 UTC",
+    "latest": "2026-11-19 05:27 UTC",
     "ok": true
   },
   "https://www.nintendolife.com/feeds/latest": {
-    "latest": "2026-11-19 02:55 UTC",
+    "latest": "2026-11-19 13:00 UTC",
     "ok": true
   },
   "https://www.patreon.com/public-rss/80117?show=800722": {
@@ -288,19 +288,19 @@
     "ok": true
   },
   "https://www.pcgamer.com/rss/": {
-    "latest": "2026-11-19 03:09 UTC",
+    "latest": "2026-11-19 12:59 UTC",
     "ok": true
   },
   "https://www.polygon.com/rss/index.xml": {
-    "latest": "2026-11-19 00:21 UTC",
+    "latest": "2026-11-19 12:07 UTC",
     "ok": true
   },
   "https://www.pushsquare.com/feeds/latest": {
-    "latest": "2026-11-19 01:00 UTC",
+    "latest": "2026-11-19 12:00 UTC",
     "ok": true
   },
   "https://www.rockpapershotgun.com/feed/": {
-    "latest": "2026-11-18 17:44 UTC",
+    "latest": "2026-11-19 13:00 UTC",
     "ok": true
   },
   "https://www.spreaker.com/show/5008213/episodes/feed": {
@@ -320,7 +320,7 @@
     "ok": true
   },
   "https://www.timeextension.com/feed": {
-    "latest": "2026-11-18 18:00 UTC",
+    "latest": "2026-11-19 12:00 UTC",
     "ok": true
   },
   "https://www.vg247.com/feed": {
@@ -508,7 +508,7 @@
     "ok": true
   },
   "youtube:UC202eItEazdvnMRK09RTtaw": {
-    "latest": "2026-11-19 02:52 UTC",
+    "latest": "2026-11-19 12:01 UTC",
     "ok": true
   },
   "youtube:UC25-_5i19rPlLosl_h7G9Ow": {
@@ -548,11 +548,11 @@
     "ok": true
   },
   "youtube:UC6W4xz9_OdWf2kF_yL7UbEQ": {
-    "latest": "2026-11-19 02:49 UTC",
+    "latest": "2026-11-19 04:13 UTC",
     "ok": true
   },
   "youtube:UC6yzV_xgKn8r77FkcmZyMSg": {
-    "latest": "2026-11-18 13:17 UTC",
+    "latest": "2026-11-19 12:00 UTC",
     "ok": true
   },
   "youtube:UC7_YxT-KID8kRbqZo7MyscQ": {
@@ -604,7 +604,7 @@
     "ok": true
   },
   "youtube:UCDbiEgV3Y7JQtaftgN7lyPw": {
-    "latest": "2026-11-18 08:10 UTC",
+    "latest": "2026-11-19 06:49 UTC",
     "ok": true
   },
   "youtube:UCE1jXbVAGJQEORz9nZqb5bQ": {
@@ -648,11 +648,11 @@
     "ok": true
   },
   "youtube:UCKqH_9mk1waLgBiL2vT5b9g": {
-    "latest": "2026-11-18 22:42 UTC",
+    "latest": "2026-11-19 08:14 UTC",
     "ok": true
   },
   "youtube:UCKy1dAqELo0zrOtPkf0eTMw": {
-    "latest": "2026-11-19 02:42 UTC",
+    "latest": "2026-11-19 13:00 UTC",
     "ok": true
   },
   "youtube:UCLC3kuN_2emyokGE4WStv6w": {
@@ -736,7 +736,7 @@
     "ok": true
   },
   "youtube:UCW_sIU3MaWW5cXSjGqNIvbw": {
-    "latest": "2026-11-18 21:13 UTC",
+    "latest": "2026-11-19 12:00 UTC",
     "ok": true
   },
   "youtube:UCWoSKWs8h6lFdiEDAjuIfpA": {
@@ -748,7 +748,7 @@
     "ok": true
   },
   "youtube:UCXspo7eyvzUh2k9d4JGLNRg": {
-    "latest": "2026-11-19 01:00 UTC",
+    "latest": "2026-11-19 05:44 UTC",
     "ok": true
   },
   "youtube:UCYWd5Q-C8M-OeDzKo86CAeg": {
@@ -784,7 +784,7 @@
     "ok": true
   },
   "youtube:UCbu2SsF-Or3Rsn3NxqODImw": {
-    "latest": "2026-11-18 23:00 UTC",
+    "latest": "2026-11-19 11:00 UTC",
     "ok": true
   },
   "youtube:UCciKycgzURdymx-GRSY2_dA": {
@@ -816,15 +816,15 @@
     "ok": true
   },
   "youtube:UCgHPug_ZesHYlCA-Jc25VgQ": {
-    "latest": "2026-11-18 20:12 UTC",
+    "latest": "2026-11-19 11:35 UTC",
     "ok": true
   },
   "youtube:UCgRaK4A7yi4ZELCLUjdP_pg": {
-    "latest": "2026-11-17 11:00 UTC",
+    "latest": "2026-11-19 11:30 UTC",
     "ok": true
   },
   "youtube:UCgaPRP68bbyHnfkPhWWBrNw": {
-    "latest": "2026-11-18 18:00 UTC",
+    "latest": "2026-11-19 12:32 UTC",
     "ok": true
   },
   "youtube:UChBb5-4ILVNPsL8xX6a4LpA": {
@@ -836,7 +836,7 @@
     "ok": true
   },
   "youtube:UCitsvZeConV2Im24BVFH8hg": {
-    "latest": "2026-11-18 22:00 UTC",
+    "latest": "2026-11-19 12:00 UTC",
     "ok": true
   },
   "youtube:UCjBp_7RuDBUYbd1LegWEJ8g": {
@@ -864,7 +864,7 @@
     "ok": true
   },
   "youtube:UCoIXnB865l9Ex9zs4OIXTdQ": {
-    "latest": "2026-11-18 20:14 UTC",
+    "latest": "2026-11-19 13:00 UTC",
     "ok": true
   },
   "youtube:UCoZQiN0o7f36H7PaW4fVhFw": {
