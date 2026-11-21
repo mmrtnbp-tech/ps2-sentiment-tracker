@@ -164,11 +164,11 @@
     "ok": true
   },
   "https://kotaku.com/rss": {
-    "latest": "2026-11-20 20:00 UTC",
+    "latest": "2026-11-21 00:30 UTC",
     "ok": true
   },
   "https://latam.ign.com/feed.xml": {
-    "latest": "2026-11-20 19:29 UTC",
+    "latest": "2026-11-21 00:11 UTC",
     "ok": true
   },
   "https://news.xbox.com/en-us/feed/": {
@@ -176,7 +176,7 @@
     "ok": true
   },
   "https://nintendoeverything.com/feed": {
-    "latest": "2026-11-20 20:01 UTC",
+    "latest": "2026-11-20 21:57 UTC",
     "ok": true
   },
   "https://pinecast.com/feed/the-minnmax-show": {
@@ -248,7 +248,7 @@
     "ok": true
   },
   "https://rss.pdrl.fm/817ebc/feeds.megaphone.fm/gamescoop": {
-    "latest": "2026-11-13 21:47 UTC",
+    "latest": "2026-11-20 23:54 UTC",
     "ok": true
   },
   "https://rss.pdrl.fm/a9cb78/feeds.megaphone.fm/ignbeyond": {
@@ -256,11 +256,11 @@
     "ok": true
   },
   "https://vandal.elespanol.com/xml.cgi": {
-    "latest": "2026-11-20 18:02 UTC",
+    "latest": "2026-11-20 20:51 UTC",
     "ok": true
   },
   "https://www.destructoid.com/feed/": {
-    "latest": "2026-11-20 19:38 UTC",
+    "latest": "2026-11-20 23:23 UTC",
     "ok": true
   },
   "https://www.eurogamer.net/feed": {
@@ -268,15 +268,15 @@
     "ok": true
   },
   "https://www.eurogamer.pt/feed": {
-    "latest": "2026-11-20 19:33 UTC",
+    "latest": "2026-11-20 23:17 UTC",
     "ok": true
   },
   "https://www.gamespot.com/feeds/mashup/": {
-    "latest": "2026-11-20 19:52 UTC",
+    "latest": "2026-11-21 01:00 UTC",
     "ok": true
   },
   "https://www.gematsu.com/feed": {
-    "latest": "2026-11-20 19:50 UTC",
+    "latest": "2026-11-20 21:13 UTC",
     "ok": true
   },
   "https://www.nintendolife.com/feeds/latest": {
@@ -288,15 +288,15 @@
     "ok": true
   },
   "https://www.pcgamer.com/rss/": {
-    "latest": "2026-11-20 19:51 UTC",
+    "latest": "2026-11-21 00:46 UTC",
     "ok": true
   },
   "https://www.polygon.com/rss/index.xml": {
-    "latest": "2026-11-20 20:09 UTC",
+    "latest": "2026-11-21 02:01 UTC",
     "ok": true
   },
   "https://www.pushsquare.com/feeds/latest": {
-    "latest": "2026-11-20 19:30 UTC",
+    "latest": "2026-11-21 02:00 UTC",
     "ok": true
   },
   "https://www.rockpapershotgun.com/feed/": {
@@ -484,7 +484,7 @@
     "ok": false
   },
   "youtube:UC-2Y8dQb0S6DtpxNgAKoJKA": {
-    "latest": "2026-11-20 20:00 UTC",
+    "latest": "2026-11-20 21:30 UTC",
     "ok": true
   },
   "youtube:UC0KU8F9jJqSLS11LRXvFWmg": {
@@ -492,7 +492,7 @@
     "ok": true
   },
   "youtube:UC0M0rxSz3IF0CsSour1iWmw": {
-    "latest": "2026-11-16 17:00 UTC",
+    "latest": "2026-11-21 00:59 UTC",
     "ok": true
   },
   "youtube:UC0fDG3byEcMtbOqPMymDNbw": {
@@ -504,7 +504,7 @@
     "ok": true
   },
   "youtube:UC1wdop56K-ORxh37G6-fs7A": {
-    "latest": "2026-11-13 18:00 UTC",
+    "latest": "2026-11-21 01:30 UTC",
     "ok": true
   },
   "youtube:UC202eItEazdvnMRK09RTtaw": {
@@ -548,7 +548,7 @@
     "ok": true
   },
   "youtube:UC6W4xz9_OdWf2kF_yL7UbEQ": {
-    "latest": "2026-11-20 17:22 UTC",
+    "latest": "2026-11-20 20:42 UTC",
     "ok": true
   },
   "youtube:UC6yzV_xgKn8r77FkcmZyMSg": {
@@ -560,7 +560,7 @@
     "ok": true
   },
   "youtube:UC7c5IWuVuiYVdKxcQ3Bpvbg": {
-    "latest": "2026-11-15 01:00 UTC",
+    "latest": "2026-11-21 01:00 UTC",
     "ok": true
   },
   "youtube:UC7hgDFSPvJVIUx_b8i1cILA": {
@@ -644,7 +644,7 @@
     "ok": true
   },
   "youtube:UCK9_x1DImhU-eolIay5rb2Q": {
-    "latest": "2026-11-20 18:14 UTC",
+    "latest": "2026-11-20 21:47 UTC",
     "ok": true
   },
   "youtube:UCKqH_9mk1waLgBiL2vT5b9g": {
@@ -652,7 +652,7 @@
     "ok": true
   },
   "youtube:UCKy1dAqELo0zrOtPkf0eTMw": {
-    "latest": "2026-11-20 20:05 UTC",
+    "latest": "2026-11-21 01:14 UTC",
     "ok": true
   },
   "youtube:UCLC3kuN_2emyokGE4WStv6w": {
@@ -672,7 +672,7 @@
     "ok": true
   },
   "youtube:UCNvzD7Z-g64bPXxGzaQaa4g": {
-    "latest": "2026-11-20 17:05 UTC",
+    "latest": "2026-11-20 22:27 UTC",
     "ok": true
   },
   "youtube:UCPYJR2EIu0_MJaDeSGwkIVw": {
@@ -728,11 +728,11 @@
     "ok": true
   },
   "youtube:UCVkqs_Q88BDmyaWwjYJ8_Ig": {
-    "latest": "2026-11-19 15:00 UTC",
+    "latest": "2026-11-20 21:00 UTC",
     "ok": true
   },
   "youtube:UCW7h-1mymnJ96akzjrmiIgA": {
-    "latest": "2026-11-20 00:46 UTC",
+    "latest": "2026-11-20 23:09 UTC",
     "ok": true
   },
   "youtube:UCW_sIU3MaWW5cXSjGqNIvbw": {
@@ -744,11 +744,11 @@
     "ok": true
   },
   "youtube:UCXbE-Ljd1C9RFe-yEdjTgkQ": {
-    "latest": "2026-11-15 18:08 UTC",
+    "latest": "2026-11-20 22:22 UTC",
     "ok": true
   },
   "youtube:UCXspo7eyvzUh2k9d4JGLNRg": {
-    "latest": "2026-11-20 15:01 UTC",
+    "latest": "2026-11-21 01:00 UTC",
     "ok": true
   },
   "youtube:UCYWd5Q-C8M-OeDzKo86CAeg": {
@@ -776,7 +776,7 @@
     "ok": true
   },
   "youtube:UC_ntXHv-XdKCD7CPynVvnQw": {
-    "latest": "2026-11-20 15:00 UTC",
+    "latest": "2026-11-20 23:28 UTC",
     "ok": true
   },
   "youtube:UCbI-X9F07inmxYvQKDBOU7Q": {
@@ -784,7 +784,7 @@
     "ok": true
   },
   "youtube:UCbu2SsF-Or3Rsn3NxqODImw": {
-    "latest": "2026-11-20 03:00 UTC",
+    "latest": "2026-11-21 01:30 UTC",
     "ok": true
   },
   "youtube:UCciKycgzURdymx-GRSY2_dA": {
@@ -792,7 +792,7 @@
     "ok": true
   },
   "youtube:UCeTvRtfRFyWXdO_ZbyArPjA": {
-    "latest": "2026-11-20 06:38 UTC",
+    "latest": "2026-11-21 01:10 UTC",
     "ok": true
   },
   "youtube:UCefAbzsWZE4uXU-mqQMrr4Q": {
@@ -824,11 +824,11 @@
     "ok": true
   },
   "youtube:UCgaPRP68bbyHnfkPhWWBrNw": {
-    "latest": "2026-11-20 20:00 UTC",
+    "latest": "2026-11-20 22:00 UTC",
     "ok": true
   },
   "youtube:UChBb5-4ILVNPsL8xX6a4LpA": {
-    "latest": "2026-11-20 00:00 UTC",
+    "latest": "2026-11-20 22:00 UTC",
     "ok": true
   },
   "youtube:UCicVsS0zrUPrA3RaOJO5oBg": {
@@ -840,7 +840,7 @@
     "ok": true
   },
   "youtube:UCjBp_7RuDBUYbd1LegWEJ8g": {
-    "latest": "2026-11-20 17:00 UTC",
+    "latest": "2026-11-20 21:00 UTC",
     "ok": true
   },
   "youtube:UCjFaPUcJU1vwk193mnW_w1w": {
@@ -856,15 +856,15 @@
     "ok": true
   },
   "youtube:UCmeds0MLhjfkjD_5acPnFlQ": {
-    "latest": "2026-11-20 19:14 UTC",
+    "latest": "2026-11-20 22:54 UTC",
     "ok": true
   },
   "youtube:UCn2pQB4jsCTLUtx2NIkCvUg": {
-    "latest": "2026-11-20 13:45 UTC",
+    "latest": "2026-11-21 02:00 UTC",
     "ok": true
   },
   "youtube:UCoIXnB865l9Ex9zs4OIXTdQ": {
-    "latest": "2026-11-20 13:00 UTC",
+    "latest": "2026-11-20 22:49 UTC",
     "ok": true
   },
   "youtube:UCoZQiN0o7f36H7PaW4fVhFw": {
@@ -904,7 +904,7 @@
     "ok": true
   },
   "youtube:UCuVxaQDraOja6xKidcmoufA": {
-    "latest": "2026-11-20 18:45 UTC",
+    "latest": "2026-11-20 22:00 UTC",
     "ok": true
   },
   "youtube:UCvZHe-SP3xC7DdOk4Ri8QBw": {
@@ -916,7 +916,7 @@
     "ok": true
   },
   "youtube:UCwUiHJUm1wpSaUXiQt_H12A": {
-    "latest": "2026-11-20 18:35 UTC",
+    "latest": "2026-11-20 22:59 UTC",
     "ok": true
   },
   "youtube:UCwkUBN7foWU9GcY5cFmso-Q": {
