@@ -164,7 +164,7 @@
     "ok": true
   },
   "https://kotaku.com/rss": {
-    "latest": "2026-11-21 00:30 UTC",
+    "latest": "2026-11-21 17:22 UTC",
     "ok": true
   },
   "https://latam.ign.com/feed.xml": {
@@ -176,7 +176,7 @@
     "ok": true
   },
   "https://nintendoeverything.com/feed": {
-    "latest": "2026-11-21 06:50 UTC",
+    "latest": "2026-11-21 15:10 UTC",
     "ok": true
   },
   "https://pinecast.com/feed/the-minnmax-show": {
@@ -256,31 +256,31 @@
     "ok": true
   },
   "https://vandal.elespanol.com/xml.cgi": {
-    "latest": "2026-11-21 09:45 UTC",
+    "latest": "2026-11-21 11:45 UTC",
     "ok": true
   },
   "https://www.destructoid.com/feed/": {
-    "latest": "2026-11-21 08:33 UTC",
+    "latest": "2026-11-21 17:27 UTC",
     "ok": true
   },
   "https://www.eurogamer.net/feed": {
-    "latest": "2026-11-21 08:00 UTC",
+    "latest": "2026-11-21 17:19 UTC",
     "ok": true
   },
   "https://www.eurogamer.pt/feed": {
-    "latest": "2026-11-20 23:17 UTC",
+    "latest": "2026-11-21 17:28 UTC",
     "ok": true
   },
   "https://www.gamespot.com/feeds/mashup/": {
-    "latest": "2026-11-21 01:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "https://www.gematsu.com/feed": {
-    "latest": "2026-11-20 21:13 UTC",
+    "latest": "2026-11-21 12:00 UTC",
     "ok": true
   },
   "https://www.nintendolife.com/feeds/latest": {
-    "latest": "2026-11-21 08:30 UTC",
+    "latest": "2026-11-21 16:00 UTC",
     "ok": true
   },
   "https://www.patreon.com/public-rss/80117?show=800722": {
@@ -288,19 +288,19 @@
     "ok": true
   },
   "https://www.pcgamer.com/rss/": {
-    "latest": "2026-11-21 00:46 UTC",
+    "latest": "2026-11-21 17:08 UTC",
     "ok": true
   },
   "https://www.polygon.com/rss/index.xml": {
-    "latest": "2026-11-21 09:06 UTC",
+    "latest": "2026-11-21 17:17 UTC",
     "ok": true
   },
   "https://www.pushsquare.com/feeds/latest": {
-    "latest": "2026-11-21 03:00 UTC",
+    "latest": "2026-11-21 15:30 UTC",
     "ok": true
   },
   "https://www.rockpapershotgun.com/feed/": {
-    "latest": "2026-11-20 16:04 UTC",
+    "latest": "2026-11-21 16:53 UTC",
     "ok": true
   },
   "https://www.spreaker.com/show/5008213/episodes/feed": {
@@ -320,7 +320,7 @@
     "ok": true
   },
   "https://www.timeextension.com/feed": {
-    "latest": "2026-11-20 19:00 UTC",
+    "latest": "2026-11-21 16:00 UTC",
     "ok": true
   },
   "https://www.vg247.com/feed": {
@@ -484,7 +484,7 @@
     "ok": false
   },
   "youtube:UC-2Y8dQb0S6DtpxNgAKoJKA": {
-    "latest": "2026-11-20 21:30 UTC",
+    "latest": "2026-11-21 12:00 UTC",
     "ok": true
   },
   "youtube:UC0KU8F9jJqSLS11LRXvFWmg": {
@@ -508,7 +508,7 @@
     "ok": true
   },
   "youtube:UC202eItEazdvnMRK09RTtaw": {
-    "latest": "2026-11-20 13:07 UTC",
+    "latest": "2026-11-21 16:11 UTC",
     "ok": true
   },
   "youtube:UC25-_5i19rPlLosl_h7G9Ow": {
@@ -552,7 +552,7 @@
     "ok": true
   },
   "youtube:UC6yzV_xgKn8r77FkcmZyMSg": {
-    "latest": "2026-11-20 17:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UC7_YxT-KID8kRbqZo7MyscQ": {
@@ -584,7 +584,7 @@
     "ok": true
   },
   "youtube:UC9PBzalIcEQCsiIkq36PyUA": {
-    "latest": "2026-11-20 15:07 UTC",
+    "latest": "2026-11-21 15:22 UTC",
     "ok": true
   },
   "youtube:UC9ZWVL1Elyt2cdiQYjxS_1w": {
@@ -592,7 +592,7 @@
     "ok": true
   },
   "youtube:UCA5RGaQc-a8tIX_AqTTmWdw": {
-    "latest": "2026-11-20 15:00 UTC",
+    "latest": "2026-11-21 16:44 UTC",
     "ok": true
   },
   "youtube:UCA5SLTAVA6unn1M-6lbo1NA": {
@@ -612,7 +612,7 @@
     "ok": true
   },
   "youtube:UCE5dIscvDxrb7CD5uiJJOiw": {
-    "latest": "2026-11-15 16:26 UTC",
+    "latest": "2026-11-21 16:30 UTC",
     "ok": true
   },
   "youtube:UCEFymXY4eFCo_AchSpxwyrg": {
@@ -640,7 +640,7 @@
     "ok": true
   },
   "youtube:UCK-65DO2oOxxMwphl2tYtcw": {
-    "latest": "2026-11-19 22:30 UTC",
+    "latest": "2026-11-21 15:00 UTC",
     "ok": true
   },
   "youtube:UCK9_x1DImhU-eolIay5rb2Q": {
@@ -652,7 +652,7 @@
     "ok": true
   },
   "youtube:UCKy1dAqELo0zrOtPkf0eTMw": {
-    "latest": "2026-11-21 03:12 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UCLC3kuN_2emyokGE4WStv6w": {
@@ -680,7 +680,7 @@
     "ok": true
   },
   "youtube:UCPke0SGE7FGIuhnGurf9qQA": {
-    "latest": "2026-11-20 14:45 UTC",
+    "latest": "2026-11-21 14:00 UTC",
     "ok": true
   },
   "youtube:UCRBkeMoYX02w-0qVIKNkruw": {
@@ -696,7 +696,7 @@
     "ok": true
   },
   "youtube:UCRwh3TVQszgmDK6UHzHNdQQ": {
-    "latest": "2026-11-19 21:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UCS5Oz6CHmeoF7vSad0qqXfw": {
@@ -716,7 +716,7 @@
     "ok": true
   },
   "youtube:UCTWbP-2W-_6mzWLg2oZmT7Q": {
-    "latest": "2026-11-20 17:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UCTdwY9mYjI9mbuLJ7Zx2How": {
@@ -736,7 +736,7 @@
     "ok": true
   },
   "youtube:UCW_sIU3MaWW5cXSjGqNIvbw": {
-    "latest": "2026-11-20 17:00 UTC",
+    "latest": "2026-11-21 12:00 UTC",
     "ok": true
   },
   "youtube:UCWoSKWs8h6lFdiEDAjuIfpA": {
@@ -748,7 +748,7 @@
     "ok": true
   },
   "youtube:UCXspo7eyvzUh2k9d4JGLNRg": {
-    "latest": "2026-11-21 05:00 UTC",
+    "latest": "2026-11-21 15:16 UTC",
     "ok": true
   },
   "youtube:UCYWd5Q-C8M-OeDzKo86CAeg": {
@@ -756,7 +756,7 @@
     "ok": true
   },
   "youtube:UCYzPXprvl5Y-Sf0g4vX-m6g": {
-    "latest": "2026-11-20 17:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UCZ7AeeVbyslLM_8-nVy2B8Q": {
@@ -772,7 +772,7 @@
     "ok": true
   },
   "youtube:UC_0CVCfC_3iuHqmyClu59Uw": {
-    "latest": "2026-11-20 15:25 UTC",
+    "latest": "2026-11-21 15:46 UTC",
     "ok": true
   },
   "youtube:UC_ntXHv-XdKCD7CPynVvnQw": {
@@ -784,7 +784,7 @@
     "ok": true
   },
   "youtube:UCbu2SsF-Or3Rsn3NxqODImw": {
-    "latest": "2026-11-21 01:30 UTC",
+    "latest": "2026-11-21 14:00 UTC",
     "ok": true
   },
   "youtube:UCciKycgzURdymx-GRSY2_dA": {
@@ -816,7 +816,7 @@
     "ok": true
   },
   "youtube:UCgHPug_ZesHYlCA-Jc25VgQ": {
-    "latest": "2026-11-21 09:15 UTC",
+    "latest": "2026-11-21 11:56 UTC",
     "ok": true
   },
   "youtube:UCgRaK4A7yi4ZELCLUjdP_pg": {
@@ -824,11 +824,11 @@
     "ok": true
   },
   "youtube:UCgaPRP68bbyHnfkPhWWBrNw": {
-    "latest": "2026-11-20 22:00 UTC",
+    "latest": "2026-11-21 16:00 UTC",
     "ok": true
   },
   "youtube:UChBb5-4ILVNPsL8xX6a4LpA": {
-    "latest": "2026-11-20 22:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UCicVsS0zrUPrA3RaOJO5oBg": {
@@ -836,7 +836,7 @@
     "ok": true
   },
   "youtube:UCitsvZeConV2Im24BVFH8hg": {
-    "latest": "2026-11-20 17:00 UTC",
+    "latest": "2026-11-21 17:00 UTC",
     "ok": true
   },
   "youtube:UCjBp_7RuDBUYbd1LegWEJ8g": {
@@ -860,7 +860,7 @@
     "ok": true
   },
   "youtube:UCn2pQB4jsCTLUtx2NIkCvUg": {
-    "latest": "2026-11-21 02:00 UTC",
+    "latest": "2026-11-21 14:00 UTC",
     "ok": true
   },
   "youtube:UCoIXnB865l9Ex9zs4OIXTdQ": {
@@ -888,7 +888,7 @@
     "ok": true
   },
   "youtube:UCr613nJgA50o8DUUT00qHvw": {
-    "latest": "2026-11-19 21:14 UTC",
+    "latest": "2026-11-21 15:31 UTC",
     "ok": true
   },
   "youtube:UCrapa0hAEAIfdZxtjODd0Lw": {
@@ -904,7 +904,7 @@
     "ok": true
   },
   "youtube:UCuVxaQDraOja6xKidcmoufA": {
-    "latest": "2026-11-20 22:00 UTC",
+    "latest": "2026-11-21 13:00 UTC",
     "ok": true
   },
   "youtube:UCvZHe-SP3xC7DdOk4Ri8QBw": {
@@ -912,11 +912,11 @@
     "ok": true
   },
   "youtube:UCw5YkWj0TfjZrQEgG8u9JjQ": {
-    "latest": "2026-11-18 21:15 UTC",
+    "latest": "2026-11-21 14:15 UTC",
     "ok": true
   },
   "youtube:UCwUiHJUm1wpSaUXiQt_H12A": {
-    "latest": "2026-11-20 22:59 UTC",
+    "latest": "2026-11-21 16:12 UTC",
     "ok": true
   },
   "youtube:UCwkUBN7foWU9GcY5cFmso-Q": {
